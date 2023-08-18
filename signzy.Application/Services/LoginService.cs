@@ -15,7 +15,7 @@ using System.Text;
 
 namespace signzy.Application.Services
 {
-    public class LoginService : BaseService, IUserService
+    public class LoginService : BaseService, ILoginservice
     {
         public IConfiguration _configuration;
 
@@ -85,18 +85,6 @@ namespace signzy.Application.Services
                    claims: authClaims,
                    signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
                    );
-        }
-
-        public  Task<User> AddUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
-        public Task<IReadOnlyList<User>> GetAllUser()
-        {
-            throw new NotImplementedException();
         }
     }
 }

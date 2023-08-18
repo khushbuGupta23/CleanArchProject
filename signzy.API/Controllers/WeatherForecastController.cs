@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using signzy.API.Attribute;
 
 namespace signzy.API.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
+    [Authorize]
     [ServiceFilter(typeof(Authentication))]
     public class WeatherForecastController : ControllerBase
     {

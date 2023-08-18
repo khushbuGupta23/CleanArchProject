@@ -10,9 +10,8 @@ namespace signzy.Application.Interfaces
 {
     public interface IUserService
     {
-        Task<LoginAuth> AuthenticateAsync(string UserName, string Password);
         Task<User> AddUser(User user);
-        Task<IReadOnlyList<User>> GetAllUser();
+        Task<List<User>> GetAllUser();
      
     }
 }

@@ -54,7 +54,8 @@ namespace signzy.API.Extensions
         {
             services.AddScoped<Authentication>();
             services.AddScoped<IConnectionRepository, ConnectionRepository>();
-            services.AddTransient<IUserService, LoginService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ILoginservice, LoginService>();
 
             return services;
         }
